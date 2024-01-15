@@ -59,7 +59,7 @@ map.on('load', () => {
 
         // Construct the source ID and file path
         const sourceId = fileName;
-        const filePath = `/MapData/${fileName}`;
+        const filePath = `MapData/${fileName}`;
 
         // Add a source for the GeoJSON file
         map.addSource(sourceId, {
