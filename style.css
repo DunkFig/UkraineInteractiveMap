@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.flag {
+    width: 240px;
+    padding: 30px;
+    padding-top: 15px;
+    filter: drop-shadow(5px 5px 5px rgba(39, 39, 39, 0.56));
+}
+
+#sidebar {
+    border: #4d4d4d21 solid 1px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: #1d1f32ab;
+    float: left;
+    height: 100%;
+    z-index: 11;
+    width: 300px;
+    text-shadow: 1px 1px 5px black;
+}
+
+#currentDateDisplay {
+    padding: 10px;
+}
+
+#sliderDiv {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 36px;
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 5px black;
+}
+
+#date {
+    width: 60%;
+    pointer-events: auto;
+}
+
+h3 {
+    padding: 20px;
+    padding-bottom: 0px;
+    text-align: center;
+    font-size: 24px;
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+}
+
+span {
+    font-style: oblique;
+}
+
+#flexContainer {
+    pointer-events: none;
+    position: absolute;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    z-index: 11;
+    height: 100%;
+    width: 100%;
+}
+
+.mapboxgl-popup-content {
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 20px;
+    padding-right: 10px;
+    z-index: 12;
+
+}
+
+.mapboxgl-popup {
+    overflow: scroll;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, rgba(171, 224, 183, 0.925), rgba(230, 150, 84, 0.902));
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 5px;
+    height: 30px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    margin: 5px;
+    box-shadow: inset 2px 2px 1px 4px rgba(0, 0, 0, 0.035);
+    ;
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    background-color: white;
+    border: #4d4d4d21 solid 1px;
+    border-radius: 20px;
+    height: 25px;
+    width: 25px;
+}
