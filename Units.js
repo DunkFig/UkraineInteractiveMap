@@ -49,6 +49,8 @@ const icons = [
     { id: 'uaRegiment', url: 'Icons/uaRegiment.png' },
 ];
 
+let selectedDate = "2022-03-31";
+
 //the DateSlider on the top
 let dateSlider = document.getElementById("date")
 
@@ -87,6 +89,19 @@ map.on('load', () => {
                 return feature.properties.date === selectedDateString;
             })
         };
+        dates.forEach(date => {
+            map.setPaintProperty(
+                date[0],
+                'fill-opacity',
+                0.0
+                );
+        } )
+        map.setPaintProperty(
+            selectedDate,
+            'fill-opacity',
+            0.7
+            );
+            
 
         map.getSource('battles').setData(filteredData);
     }
@@ -159,7 +174,7 @@ map.on('load', () => {
     // Slider event listener
     dateSlider.addEventListener('input', function () {
         const selectedDateIndex = this.value;
-        const selectedDate = dates[selectedDateIndex][0];
+        selectedDate = dates[selectedDateIndex][0];
         currentDateDisplay.innerHTML = dates[selectedDateIndex][1]; // Display the formatted date
         updateMapLayer(selectedDate);
     });
