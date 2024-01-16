@@ -28,7 +28,7 @@ let dates = [
 let dateSlider = document.getElementById("date")
 
 map.on('load', () => {
-    const filePath = `BattleData/units_all.geojson`;
+    const filePath = `Units&BattleData/units_all.geojson`;
 
     //placeholder variable for geoJSON data
     let geojsonData = null;

@@ -1,31 +1,13 @@
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 #map {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 0px;
+    bottom: 0px;
     width: 100%;
-}
-
-.flag {
-    width: 240px;
-    padding: 30px;
-    padding-top: 15px;
-    filter: drop-shadow(5px 5px 5px rgba(39, 39, 39, 0.56));
-}
-
-#sidebar {
-    border: #4d4d4d21 solid 1px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    background-color: #1d1f32ab;
-    float: left;
-    height: 100%;
-    z-index: 11;
-    width: 300px;
-    text-shadow: 1px 1px 5px black;
 }
 
 #currentDateDisplay {
@@ -48,13 +30,12 @@ body {
 }
 
 h3 {
-    padding: 20px;
-    padding-bottom: 0px;
     text-align: center;
     font-size: 24px;
     color: aliceblue;
     font-family: 'Montserrat', sans-serif;
 }
+
 
 span {
     font-style: oblique;
@@ -71,11 +52,11 @@ span {
 }
 
 .mapboxgl-popup-content {
+    margin: 0px;
     font-family: 'Montserrat', sans-serif;
-    padding-left: 20px;
+    padding-left: 10px;
     padding-right: 10px;
     z-index: 12;
-
 }
 
 .mapboxgl-popup {
