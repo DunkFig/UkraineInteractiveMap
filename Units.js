@@ -1,4 +1,4 @@
-
+//This has all of the dates for the Slider.
 let dates = [
     ["2022-03-31", "March 31st 2022"],
     ["2022-04-01", "April 1st 2022"],
@@ -22,12 +22,46 @@ let dates = [
     ["2022-08-20", "August 20th 2022"],
     ["2022-08-27", "August 27th 2022"],
     ["2022-09-11", "September 11th 2022"]
-]
+];
+
+//This hold an array of all of the Icons for easy access. 
+const icons = [
+    { id: 'ruCorps', url: 'Icons/ruCorps.png' },
+    { id: 'ruArmy', url: 'Icons/ruArmy.png' },
+    { id: 'ruArtillery', url: 'Icons/ruArtillery.png' },
+    { id: 'ruBattalion', url: 'Icons/ruBattalion.png' },
+    { id: 'ruBattle', url: 'Icons/ruBattle.png' },
+    { id: 'ruBrigade', url: 'Icons/ruBrigade.png' },
+    { id: 'ruCavalry', url: 'Icons/ruCavalry.png' },
+    { id: 'ruDivision', url: 'Icons/ruDivision.png' },
+    { id: 'ruHeadquarters', url: 'Icons/ruHeadquarters.png' },
+    { id: 'ruInfantry', url: 'Icons/ruInfantry.png' },
+    { id: 'ruRegiment', url: 'Icons/ruRegiment.png' },
+    { id: 'uaArmy', url: 'Icons/uaArmy.png' },
+    { id: 'uaArtillery', url: 'Icons/uaArtillery.png' },
+    { id: 'uaBattalion', url: 'Icons/uaBattalion.png' },
+    { id: 'uaBattle', url: 'Icons/uaBattle.png' },
+    { id: 'uaBrigade', url: 'Icons/uaBrigade.png' },
+    { id: 'uaCavalry', url: 'Icons/uaCavalry.png' },
+    { id: 'uaDivision', url: 'Icons/uaDivision.png' },
+    { id: 'uaHeadquarters', url: 'Icons/uaHeadquarters.png' },
+    { id: 'uaInfantry', url: 'Icons/uaInfantry.png' },
+    { id: 'uaRegiment', url: 'Icons/uaRegiment.png' },
+];
 
 //the DateSlider on the top
 let dateSlider = document.getElementById("date")
 
 map.on('load', () => {
+
+    //load all of the images from Icons
+    icons.forEach(icon => {
+        map.loadImage(icon.url, (error, image) => {
+            if (error) throw error;
+            map.addImage(icon.id, image);
+        });
+    });
+
     const filePath = `Units&BattleData/units_all.geojson`;
 
     //placeholder variable for geoJSON data
@@ -43,10 +77,13 @@ map.on('load', () => {
             updateMapLayer(dates[dateSlider.value][0]);
         });
 
+    //Update the map, is called when the slider is moved.
     function updateMapLayer(selectedDateString) {
         const filteredData = {
             ...geojsonData,
             features: geojsonData.features.filter(feature => {
+                const iconName = `${feature.properties.country}${feature.properties.strength}`;
+                feature.properties.icon = iconName; // Construct icon name from feature properties
                 return feature.properties.date === selectedDateString;
             })
         };
@@ -61,30 +98,15 @@ map.on('load', () => {
     });
 
 
-    // Add a layer to visualize the polygon using the same source
+    // Add the Layers from the GeoJson file, and attach the icons to it. 
     map.addLayer({
         id: 'battles-layer',
-        type: 'circle',
+        type: 'symbol',
         source: 'battles',
-        paint: {
-            'circle-radius': {
-                'base': 5,
-                'stops': [
-                    [3, 4],
-                    [22, 180]
-                ]
-            },
-            'circle-color': [
-                'match',
-                ['get', 'country'],
-                'ru', '#6e1704', // Color for 'ru'
-                'ua', '#abe0b7', // Color for 'ua'
-                '#ccc' // Default color for other types
-            ]
-        },// reference the data source by the unique ID you gave it
-        layout: {}
+        layout: {
+            'icon-image': ['get', 'icon'],
+        }
     });
-
 
     // Create a popup, but don't add it to the map yet
     const popup = new mapboxgl.Popup({
@@ -92,6 +114,7 @@ map.on('load', () => {
         closeOnClick: false
     });
 
+    //Pop Up info.
     map.on('mousemove', 'battles-layer', (e) => {
 
         // Turns Cursor to pointer on each region
@@ -105,9 +128,9 @@ map.on('load', () => {
             .setHTML(`<h1>${feature.properties.unit}</h1>
             <p><span>Type: </span>${feature.properties.type}</p>
             <p><span>Country: </span>${feature.properties.country}</p>
-            <p><span>Strength: </span>${feature.properties.strength}</p>
-            <p><span>Source: </span> ${feature.properties.sources_url} </p>`) // Replace 'title' and 'description' with your actual property names
+            <p><span>Strength: </span>${feature.properties.strength}</p>`)
             .addTo(map);
+
 
         // Ensure the popup is added to the map before attempting to modify its style
         setTimeout(() => {
@@ -125,9 +148,9 @@ map.on('load', () => {
                 }
             }
         }, 10);
-        //
     });
 
+    // remove the popup when the mouse moves away
     map.on('mouseleave', 'battles-layer', () => {
         map.getCanvas().style.cursor = '';
         popup.remove();
