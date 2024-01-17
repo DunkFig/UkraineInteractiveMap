@@ -24,6 +24,10 @@ let dates = [
     ["2022-09-11", "September 11th 2022"]
 ];
 
+let DateIndex = 0
+
+let selectedDate = "2022-03-31";
+
 //This hold an array of all of the Icons for easy access. 
 const icons = [
     { id: 'ruCorps', url: 'Icons/ruCorps.png' },
@@ -49,7 +53,9 @@ const icons = [
     { id: 'uaRegiment', url: 'Icons/uaRegiment.png' },
 ];
 
-let selectedDate = "2022-03-31";
+
+
+
 
 //the DateSlider on the top
 let dateSlider = document.getElementById("date")
@@ -89,19 +95,40 @@ map.on('load', () => {
                 return feature.properties.date === selectedDateString;
             })
         };
+        DateIndex = dates.findIndex(date => date[0] === selectedDate);
+        
         dates.forEach(date => {
             map.setPaintProperty(
                 date[0],
                 'fill-opacity',
                 0.0
-                );
-        } )
+            );
+            map.setPaintProperty(
+                date[0],
+                'fill-color','#FF7F63'
+            );
+        })
         map.setPaintProperty(
             selectedDate,
             'fill-opacity',
-            0.7
+            0.5
+        );
+        if(DateIndex != 0){
+            map.setPaintProperty(
+                dates[DateIndex -1][0],
+                'fill-color','#2A6BF5',
             );
+            map.setPaintProperty(
+                dates[DateIndex -1][0],
+                'fill-opacity', 0.5
+            );
+
+
+
             
+        }
+       
+        
 
         map.getSource('battles').setData(filteredData);
     }
@@ -143,7 +170,8 @@ map.on('load', () => {
             .setHTML(`<h1>${feature.properties.unit}</h1>
             <p><span>Type: </span>${feature.properties.type}</p>
             <p><span>Country: </span>${feature.properties.country}</p>
-            <p><span>Strength: </span>${feature.properties.strength}</p>`)
+            <p><span>Strength: </span>${feature.properties.strength}</p>
+            <p><span>Subordinate to : </span>${feature.properties.subordinate_to}</p>`)
             .addTo(map);
 
 
@@ -173,6 +201,8 @@ map.on('load', () => {
 
     // Slider event listener
     dateSlider.addEventListener('input', function () {
+        console.log(DateIndex)
+        console.log(selectedDate)
         const selectedDateIndex = this.value;
         selectedDate = dates[selectedDateIndex][0];
         currentDateDisplay.innerHTML = dates[selectedDateIndex][1]; // Display the formatted date

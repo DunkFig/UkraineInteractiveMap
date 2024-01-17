@@ -29,6 +29,8 @@ const geojsonFiles = [
     "2022-09-11.geojson"
 ];
 
+
+
 //access token for the mapbox API, I'm using my personal one but we might want to buy a version before we deploy it.
 mapboxgl.accessToken = 'pk.eyJ1IjoiZHVuY2FuZmlndXJza2kiLCJhIjoiY2xyNTZyeGcxMXY3dzJscW1rMmk4d3R5aCJ9.mTx5M9U67nyYqhwDgrnk8w';
 var map = new mapboxgl.Map({
@@ -42,6 +44,8 @@ var map = new mapboxgl.Map({
 
 
 map.on('load', () => {
+
+    let CrimeaSilouette = null;
 
     // For loop loading all GeoJson Files, as well as setting their opacity to 0.0
     geojsonFiles.forEach(fileName => {
@@ -67,7 +71,31 @@ map.on('load', () => {
                 'fill-opacity': 0.0
             }
         });
-        
+
     })
+
+    fetch('Boundaries/UA_43_Avtonomna_Respublika_Krym.geojson')
+        .then(response => response.json())
+        .then(data => {
+            geojsonData = data;
+        });
+
+         // The source for the GeoJson
+    map.addSource('crimea', { // Give a unique ID for the source
+        type: 'geojson',
+        data: 'Boundaries/UA_43_Avtonomna_Respublika_Krym.geojson'
+    });
+
+    map.addLayer({
+        id: 'crimea-layer',
+        type: 'fill',
+        source: 'crimea',
+        layout: {},
+            paint: {
+                'fill-color': '#F52A2A',
+                'fill-opacity': 1.0
+            }
+    });
+
 
 })
