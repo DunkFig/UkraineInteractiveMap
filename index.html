@@ -14,34 +14,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    
+
 </head>
 
 <body>
+
+
 
     <div id='map'></div>
 
 
 
 
+
     <div id="flexContainer">
-
-        
-        <div id = "sliderDiv"> 
-            <input type = range id="date" name="date" min="0" max="21" value="0" step="1">
-            <div id ="currentDateDisplay">March 31st 2022</div>
+        <div id="sliderDiv">
+            <input type=range id="date" name="date" min="0" max="21" value="0" step="1">
+            <div id="currentDateDisplay">March 31st 2022</div>
         </div>
-          
-
-    </div>      
+    </div>
 
 
-    
-    
+    <div id="infoContainer">
+        <p class="questions">Key
+            <img id="key" src="Icons/Key.png">
+        </p>
 
+        <p class="questions">Boundaries
+            <img id="key" src="Icons/Boundaries.png">
+        </p>
+
+        <div class="questions">Info
+            <div id="info">
+                This site was developed using data from: <a>https://uawardata.com/</a>
+                <br>
+                <br>
+                and 
+                <br>
+                <br>
+                using open source data from <a>https://militaryland.net/</a>
+            </div>
+        </div>
+
+    </div>
 
 </body>
 
 <script src="map.js"></script>
 <script src="Units.js"></script>
+
 </html>

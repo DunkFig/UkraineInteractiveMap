@@ -60,6 +60,8 @@ const icons = [
 //the DateSlider on the top
 let dateSlider = document.getElementById("date")
 
+let questionHover = document.getElementById("questions")
+
 map.on('load', () => {
 
     //load all of the images from Icons
@@ -201,13 +203,10 @@ map.on('load', () => {
 
     // Slider event listener
     dateSlider.addEventListener('input', function () {
-        console.log(DateIndex)
-        console.log(selectedDate)
         const selectedDateIndex = this.value;
         selectedDate = dates[selectedDateIndex][0];
         currentDateDisplay.innerHTML = dates[selectedDateIndex][1]; // Display the formatted date
         updateMapLayer(selectedDate);
     });
-
 
 });
