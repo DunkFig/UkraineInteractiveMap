@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/3.1.0/mapbox-gl.js" integrity="sha512-HvbZxJlF/g7dQDyBFheXq4QTIgzVhPeo4C/Eh/EBCZD2i+q6eq6mBAPruZaSHpaVd+m+0vzfnql8cHBBq3E69Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,12 +19,7 @@
 
 <body>
 
-
-
     <div id='map'></div>
-
-
-
 
 
     <div id="flexContainer">
@@ -36,15 +31,15 @@
 
 
     <div id="infoContainer">
-        <p class="questions">Key
+        <p class="sideToggle">Key
             <img id="key" src="Icons/Key.png">
         </p>
 
-        <p class="questions">Boundaries
+        <p class="sideToggle">Boundaries
             <img id="key" src="Icons/Boundaries.png">
         </p>
 
-        <div class="questions">Info
+        <div class="sideToggle">Info
             <div id="info">
                 This site was developed using data from: <a>https://uawardata.com/</a>
                 <br>
@@ -61,6 +56,7 @@
 </body>
 
 <script src="map.js"></script>
+<script src="Lines.js"></script>
 <script src="Units.js"></script>
 
 </html>

@@ -24,6 +24,7 @@ let dates = [
     ["2022-09-11", "September 11th 2022"]
 ];
 
+// This variable is used as a placeholder to cycle through the array of dates
 let DateIndex = 0
 
 let selectedDate = "2022-03-31";
@@ -54,11 +55,9 @@ const icons = [
 ];
 
 
-
-
-
 //the DateSlider on the top
 let dateSlider = document.getElementById("date")
+
 
 let questionHover = document.getElementById("questions")
 
@@ -98,7 +97,7 @@ map.on('load', () => {
             })
         };
         DateIndex = dates.findIndex(date => date[0] === selectedDate);
-        
+
         dates.forEach(date => {
             map.setPaintProperty(
                 date[0],
@@ -107,7 +106,12 @@ map.on('load', () => {
             );
             map.setPaintProperty(
                 date[0],
-                'fill-color','#FF7F63'
+                'fill-color', 'red'
+            );
+            map.setPaintProperty(
+                date[0] + "Line",
+                'line-opacity',
+                0.0
             );
         })
         map.setPaintProperty(
@@ -115,22 +119,23 @@ map.on('load', () => {
             'fill-opacity',
             0.5
         );
-        if(DateIndex != 0){
+        map.setPaintProperty(
+            selectedDate + "Line",
+            'line-opacity',
+            0.6
+        );
+        if (DateIndex != 0) {
             map.setPaintProperty(
-                dates[DateIndex -1][0],
-                'fill-color','#2A6BF5',
+                dates[DateIndex - 1][0],
+                'fill-color', '#2A6BF5',
             );
             map.setPaintProperty(
-                dates[DateIndex -1][0],
+                dates[DateIndex - 1][0],
                 'fill-opacity', 0.5
             );
-
-
-
-            
         }
-       
-        
+
+
 
         map.getSource('battles').setData(filteredData);
     }
@@ -151,6 +156,8 @@ map.on('load', () => {
             'icon-image': ['get', 'icon'],
         }
     });
+
+   map.fadeDuration = 400
 
     // Create a popup, but don't add it to the map yet
     const popup = new mapboxgl.Popup({
@@ -210,3 +217,5 @@ map.on('load', () => {
     });
 
 });
+
+

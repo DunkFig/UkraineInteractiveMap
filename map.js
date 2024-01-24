@@ -30,7 +30,6 @@ const geojsonFiles = [
 ];
 
 
-
 //access token for the mapbox API, I'm using my personal one but we might want to buy a version before we deploy it.
 mapboxgl.accessToken = 'pk.eyJ1IjoiZHVuY2FuZmlndXJza2kiLCJhIjoiY2xyNTZyeGcxMXY3dzJscW1rMmk4d3R5aCJ9.mTx5M9U67nyYqhwDgrnk8w';
 var map = new mapboxgl.Map({
@@ -39,19 +38,18 @@ var map = new mapboxgl.Map({
     minZoom: 5.2,
     container: 'map',
     maxBounds: bounds,
-    style: 'mapbox://styles/duncanfigurski/clrfco9tw009w01qra04j91jq'
+    style: 'mapbox://styles/duncanfigurski/clrpgupsg007d01p28njtcb6a'
 })
 
 
 map.on('load', () => {
-
-    let CrimeaSilouette = null;
 
     // For loop loading all GeoJson Files, as well as setting their opacity to 0.0
     geojsonFiles.forEach(fileName => {
         let DateName = fileName.replace(".geojson", "");
         // Construct the source ID and file path
         const sourceId = DateName;
+
         const filePath = `Boundaries/${fileName}`;
 
         // Add a source for the GeoJSON file
@@ -60,6 +58,7 @@ map.on('load', () => {
             data: filePath
         });
 
+
         // Add a layer to visualize the polygon using the same source
         map.addLayer({
             id: sourceId,
@@ -67,10 +66,12 @@ map.on('load', () => {
             source: sourceId, // reference the data source with the same ID
             layout: {},
             paint: {
-                'fill-color': '#FF7F63',
+                'fill-color': 'red',
                 'fill-opacity': 0.0
             }
         });
+
+   
 
     })
 
@@ -92,8 +93,8 @@ map.on('load', () => {
         source: 'crimea',
         layout: {},
             paint: {
-                'fill-color': '#F52A2A',
-                'fill-opacity': 1.0
+                'fill-color': 'red',
+                'fill-opacity': 0.3
             }
     });
 
