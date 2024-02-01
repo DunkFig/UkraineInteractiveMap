@@ -9,7 +9,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/3.1.0/mapbox-gl.js" integrity="sha512-HvbZxJlF/g7dQDyBFheXq4QTIgzVhPeo4C/Eh/EBCZD2i+q6eq6mBAPruZaSHpaVd+m+0vzfnql8cHBBq3E69Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/3.1.0/mapbox-gl.js"
+        integrity="sha512-HvbZxJlF/g7dQDyBFheXq4QTIgzVhPeo4C/Eh/EBCZD2i+q6eq6mBAPruZaSHpaVd+m+0vzfnql8cHBBq3E69Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +28,10 @@
         <div id="sliderDiv">
             <input type=range id="date" name="date" min="0" max="21" value="0" step="1">
             <div id="currentDateDisplay">March 31st 2022</div>
+        </div>
+        <div id="slider2Div">
+            <input type=range id="dateFort" name="date" min="0" max="11" value="0" step="1">
+            <div id="currentBombDisplay">Clear Map</div>
         </div>
     </div>
 
@@ -44,19 +50,67 @@
                 This site was developed using data from: <a>https://uawardata.com/</a>
                 <br>
                 <br>
-                and 
+                and
                 <br>
                 <br>
                 using open source data from <a>https://militaryland.net/</a>
             </div>
         </div>
+    </div>
 
+    <div class="rightToggle">
+        <button class="styleToggle" id="mapButton">Toggle Map</button>
+    </div>
+    <br> 
+    <div class="rightToggle" id="cameraButtonTog" style="top: 300px; width: 7%; left:93%; display: none;">
+        <button style="background-color: rgba(127, 255, 212, 0); border: rgba(128, 255, 0, 0);" id="cameraButton"><img
+                id="cameraToggle" src='CameraIcon.png' style="width: 60px; opacity: 0.3"></button>
+    </div>
+    <div class="rightToggle" id="lineTogButton" style="top: 400px; width: 7%; left:93%; display: none;">
+        <button style="background-color: rgba(127, 255, 212, 0); border: rgba(128, 255, 0, 0); " id="lineButton"><img
+                id="LineToggle" src='LineIcon.png' style="width: 60px; opacity: 0.3;"></button>
     </div>
 
 </body>
 
 <script src="map.js"></script>
-<script src="Lines.js"></script>
 <script src="Units.js"></script>
+<script src="Fortifications.js"></script>
+<!-- <script src="Practice.js"></script> -->
+
+
+<script>
+    let cameraToggle = false;
+    let cameraImage = document.getElementById("cameraToggle")
+    let cameraButton = document.getElementById("cameraButtonTog")
+
+
+    cameraButton.addEventListener('click', () => {
+        cameraToggle = !cameraToggle
+        if (cameraToggle) {
+            cameraImage.style.opacity = '1'
+            map.setPaintProperty('Russian_and_Belarusian_Fortifications/High_resolution_images.geojson', 'icon-opacity', 1.0)
+    } else {
+            cameraImage.style.opacity = '0.3'
+            map.setPaintProperty('Russian_and_Belarusian_Fortifications/High_resolution_images.geojson', 'icon-opacity', 0.0)
+    }
+    })
+
+    let LineToggle = false
+    let LineImage = document.getElementById('LineToggle')
+    let lineButton = document.getElementById('lineTogButton')
+
+    lineButton.addEventListener('click', () =>{
+        LineToggle = !LineToggle
+        if(LineToggle){
+            LineImage.style.opacity = '1'
+            map.setPaintProperty('Russian_and_Belarusian_Fortifications/Russian_and_Belarusian_fortifications_traced.geojson', 'line-opacity', 1.0)
+        }else{
+            LineImage.style.opacity = '0.3'
+            map.setPaintProperty('Russian_and_Belarusian_Fortifications/Russian_and_Belarusian_fortifications_traced.geojson', 'line-opacity', 0.0)
+        }
+    })
+
+</script>
 
 </html>
