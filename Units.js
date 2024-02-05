@@ -102,6 +102,16 @@ const geojsonLineFiles = [
     "2022-09-11.geojson"
 ];
 
+const sliderMarksContainer = document.getElementById('sliderMarksContainer');
+
+dates.forEach((point, index, array) => {
+    const mark = document.createElement('span');
+    mark.classList.add('mark');
+    const positionPercent = (index / (array.length - 1)) * 57.8;
+    mark.style.left = `${positionPercent}%`;
+    sliderMarksContainer.appendChild(mark);
+  });
+
 
 
 // This variable is used as a placeholder to cycle through the array of dates
@@ -139,10 +149,7 @@ function ResetBattle() {
 
         const filePath = `Boundaries/${fileName}`;
 
-        // Construct the source ID and file path
-        const LinesourceId = DateName + "Line";
 
-        const LinefilePath = `GeoJsonLines/${fileName}`;
 
         // Add a source for the GeoJSON file
         map.addSource(sourceId, {
@@ -159,24 +166,6 @@ function ResetBattle() {
             paint: {
                 'fill-color': 'red',
                 'fill-opacity': 0.0
-            }
-        });
-
-        // Add a source for the GeoJSON LINE file
-        map.addSource(LinesourceId, {
-            type: 'geojson',
-            data: LinefilePath
-        });
-
-        // Add a layer to visualize the polygon using the same source
-        map.addLayer({
-            id: LinesourceId,
-            type: 'line',
-            source: LinesourceId, // reference the data source with the same ID
-            layout: {},
-            paint: {
-                'line-color': '#db9e02',
-                'line-width': 11
             }
         });
     })
@@ -253,21 +242,11 @@ function ResetBattle() {
                 date[0],
                 'fill-color', 'red'
             );
-            map.setPaintProperty(
-                date[0] + "Line",
-                'line-opacity',
-                0.0
-            );
         })
         map.setPaintProperty(
             selectedDate,
             'fill-opacity',
             0.5
-        );
-        map.setPaintProperty(
-            selectedDate + "Line",
-            'line-opacity',
-            0.6
         );
         if (DateIndex != 0) {
             map.setPaintProperty(
@@ -276,7 +255,7 @@ function ResetBattle() {
             );
             map.setPaintProperty(
                 dates[DateIndex - 1][0],
-                'fill-opacity', 0.2
+                'fill-opacity', 0.3
             );
         }
         map.getSource('battles').setData(filteredData);
@@ -322,7 +301,7 @@ function ResetBattle() {
         maxzoom: 6
     });
 
-
+    
 
     // Create a popup, but don't add it to the map yet
     const popup = new mapboxgl.Popup({
@@ -349,22 +328,9 @@ function ResetBattle() {
             .addTo(map);
 
 
-        // Ensure the popup is added to the map before attempting to modify its style
-        setTimeout(() => {
-            if (feature && feature.properties && (feature.properties.country === 'ru' || feature.properties.country === 'ua')) {
-                let popupStyle = document.querySelector('.mapboxgl-popup-content'); // Assuming there's only one popup at a time
-                if (popupStyle) {
-                    // Use different colors if necessary
-                    if (feature.properties.country === 'ru') {
-                        popupStyle.style.backgroundColor = 'rgb(110, 23, 4, 0.935)'; // Color for 'ru'
-                        popupStyle.style.color = "aliceblue"
-                    } else if (feature.properties.country === 'ua') {
-                        popupStyle.style.backgroundColor = 'rgba(171, 224, 183, 0.925)'; // Color for 'ua'
-                        popupStyle.style.color = "rgb(16, 16, 16, 0.9)"
-                    }
-                }
-            }
-        }, 10);
+    currentStyle = map.getStyle().sprite;
+
+    
     });
 
 

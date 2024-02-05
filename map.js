@@ -15,6 +15,16 @@ var map = new mapboxgl.Map({
     style: 'mapbox://styles/duncanfigurski/clrpgupsg007d01p28njtcb6a'
 })
 
+map.setMaxPitch(0);
+map.setMinPitch(0);
+
+
+// disable map rotation using right click + drag
+map.dragRotate.disable();
+ 
+// disable map rotation using touch rotation gesture
+map.touchZoomRotate.disableRotation();
+
 document.getElementById('slider2Div').style.display = "none"
 
 //This is the toggle button on the side that switches between our custom map style and the sattelite map style.

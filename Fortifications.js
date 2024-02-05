@@ -23,6 +23,19 @@ const FortificationDates = [
     ['2023\/08\/', "August 2023"]
 ];
 
+
+// let sliderMarksContainerFort = document.getElementById('sliderMarksContainerFort');
+
+FortificationDates.forEach((point, index, array) => {
+    const markF = document.createElement('span');
+    markF.classList.add('markF');
+    const positionPercent = (index / (array.length - 1)) * 58;
+    markF.style.left = `${positionPercent}%`;
+    sliderMarksContainerFort.appendChild(markF);
+  });
+
+
+
 let currentSliderIndex = 0; // Default to the first position, adjust as necessary.
 
 
@@ -63,7 +76,7 @@ function ResetFortifications() {
         map.addImage('CameraIcon.png', image);
     });
 
-    const popup = new mapboxgl.Popup({
+    const popupFort = new mapboxgl.Popup({
         closeButton: false,
         closeOnClick: false
     });
@@ -180,7 +193,7 @@ function ResetFortifications() {
         const feature = e.features[0];
 
         // This displays the popUp it is also where I'm injecting info from the GEOJSON
-        popup.setLngLat(e.lngLat)
+        popupFort.setLngLat(e.lngLat)
             .setHTML(`
                 <p><span>Reported: </span>${feature.properties.Name}</p>
                 <br>
@@ -198,7 +211,7 @@ function ResetFortifications() {
     // remove the popup when the mouse moves away
     map.on('mouseleave', 'Russian_and_Belarusian_Fortifications/High_resolution_images.geojson', () => {
         map.getCanvas().style.cursor = '';
-        popup.remove();
+        popupFort.remove();
     });
 
     if (cameraToggle) {
@@ -242,7 +255,11 @@ BombSlider.addEventListener('input', function () {
     selectedDateIndex = this.value;
     currentSliderIndex = selectedDateIndex; // Update the global variable.
     let currentBombDisplay = document.getElementById('currentBombDisplay');
-    currentBombDisplay.innerHTML = "Reported:" + FortificationDates[selectedDateIndex][1];
+    if(FortificationDates[selectedDateIndex][1] != "Clear Map"){
+    currentBombDisplay.innerHTML = "Reported:  " + FortificationDates[selectedDateIndex][1];
+    }else{
+        currentBombDisplay.innerHTML = "Clear Map"
+    }
     updateMapLayer(selectedDateIndex);
 });
 
