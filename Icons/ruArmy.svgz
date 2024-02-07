@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#D91704;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st1{opacity:0.66;fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;enable-background:new    ;}
+	.st2{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#D91704;stroke-width:8;stroke-linecap:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#D91704;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st5{fill:#D91704;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st6{fill:#D91704;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:9.9999;}
+	.st7{fill:#ABE0B7;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st8{fill:none;stroke:#ABE0B7;stroke-width:8;stroke-linecap:round;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#ABE0B7;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st10{fill:#ABE0B7;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st11{fill:#ABE0B7;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:9.9999;}
+	.st12{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st13{fill:none;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st14{fill:#ABE0B7;}
+	.st15{fill:#D91704;}
+</style>
+<g id="ruCavalry">
+	<g>
+		<rect x="214.7" y="187.2" class="st0" width="59.7" height="39.8"/>
+		<line class="st1" x1="216.1" y1="226.7" x2="274.4" y2="187.2"/>
+	</g>
+</g>
+<g id="ruInfantry">
+	<g>
+		<rect x="215.2" y="257.4" class="st0" width="59.7" height="39.8"/>
+		<line class="st2" x1="215.7" y1="257.5" x2="275" y2="297.2"/>
+		<line class="st2" x1="274.8" y1="257.9" x2="215.2" y2="297.2"/>
+	</g>
+</g>
+<g id="ruArtillery">
+	<g>
+		<line class="st3" x1="214.8" y1="354.3" x2="258.9" y2="354.3"/>
+		<line class="st4" x1="239.7" y1="345.6" x2="239.7" y2="362.9"/>
+		<line class="st4" x1="230.1" y1="364" x2="248.5" y2="364"/>
+		<line class="st4" x1="230.1" y1="344.5" x2="248.5" y2="344.5"/>
+	</g>
+</g>
+<g id="ruBattle">
+	<g>
+		<polygon class="st5" points="238.3,772.7 230.8,764.2 230.8,776.7 215.2,771.2 225.5,781.7 217.6,787 228,788.7 215.2,797.7 
+			230.4,797.7 230.2,809 238.3,797.9 244,805.6 246.6,798.7 254.7,806 254.7,797.9 271.4,807.1 260.2,794.3 270.5,788.9 
+			258.1,786.6 270.5,775.5 253.2,778.9 258.1,764.2 247.5,773.6 247.4,754.6 		"/>
+	</g>
+</g>
+<g id="ruHeadquarters">
+	<g>
+		
+			<rect x="225" y="833.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -527.4497 412.2494)" class="st6" width="17.8" height="17.8"/>
+		
+			<rect x="225" y="881.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -561.0396 426.1591)" class="st6" width="17.8" height="17.8"/>
+		
+			<rect x="248.8" y="857.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -537.269 436.0491)" class="st6" width="17.8" height="17.8"/>
+		
+			<rect x="201.3" y="857.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -551.1787 402.4593)" class="st6" width="17.8" height="17.8"/>
+		<path class="st5" d="M233.9,855.4"/>
+		
+			<rect x="213.7" y="849.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -539.1107 406.9044)" class="st6" width="15.8" height="9.9"/>
+		
+			<rect x="240.5" y="846.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -532.5301 424.0157)" class="st6" width="10.2" height="15.8"/>
+		<polygon class="st5" points="247.5,868.9 236.3,880.1 243.6,887.4 254.4,876.6 		"/>
+		
+			<rect x="217.1" y="870.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -555.8591 414.42)" class="st6" width="10.4" height="15.8"/>
+	</g>
+</g>
+<g id="uaCavalry">
+	<g>
+		<rect x="86.9" y="183" class="st7" width="59.7" height="39.8"/>
+		<line class="st1" x1="88.4" y1="222.5" x2="146.6" y2="183"/>
+	</g>
+</g>
+<g id="uaInfantry">
+	<g>
+		<rect x="87.5" y="253.2" class="st7" width="59.7" height="39.8"/>
+		<line class="st2" x1="88" y1="253.4" x2="147.2" y2="293"/>
+		<line class="st2" x1="147.1" y1="253.7" x2="87.5" y2="293"/>
+	</g>
+</g>
+<g id="uaArtillery">
+	<g>
+		<line class="st8" x1="94.8" y1="354.3" x2="138.8" y2="354.3"/>
+		<line class="st9" x1="119.6" y1="345.6" x2="119.6" y2="362.9"/>
+		<line class="st9" x1="110" y1="364" x2="128.5" y2="364"/>
+		<line class="st9" x1="110" y1="344.5" x2="128.5" y2="344.5"/>
+	</g>
+</g>
+<g id="uaBattle">
+	<g>
+		<polygon class="st10" points="101.7,771.6 94.2,763.2 94.2,775.6 78.6,770.1 88.9,780.7 81,785.9 91.4,787.6 78.6,796.7 
+			93.8,796.7 93.6,808 101.7,796.9 107.4,804.6 110,797.6 118.1,804.9 118.1,796.9 134.9,806.1 123.6,793.3 133.9,787.8 
+			121.5,785.6 133.9,774.5 116.6,777.8 121.5,763.2 111,772.6 110.8,753.6 		"/>
+	</g>
+</g>
+<g id="uaHeadquarters">
+	<g>
+		
+			<rect x="105" y="833.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -562.5767 327.3775)" class="st11" width="17.8" height="17.8"/>
+		
+			<rect x="105" y="881.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -596.1665 341.2872)" class="st11" width="17.8" height="17.8"/>
+		
+			<rect x="128.7" y="857.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -572.4667 351.1479)" class="st11" width="17.8" height="17.8"/>
+		
+			<rect x="81.2" y="857.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -586.3765 317.5581)" class="st11" width="17.8" height="17.8"/>
+		<path class="st10" d="M113.9,855.4"/>
+		
+			<rect x="93.6" y="849.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -574.3085 322.0032)" class="st11" width="15.8" height="9.9"/>
+		
+			<rect x="120.5" y="846.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -567.657 339.1439)" class="st11" width="10.2" height="15.8"/>
+		<polygon class="st10" points="127.4,868.9 116.2,880.1 123.6,887.4 134.4,876.6 		"/>
+		
+			<rect x="97.1" y="870.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -590.9861 329.5481)" class="st11" width="10.4" height="15.8"/>
+	</g>
+</g>
+<g id="ruDivision">
+	<g>
+		<line class="st12" x1="250.5" y1="399" x2="259.8" y2="412.2"/>
+		<line class="st12" x1="260.8" y1="399" x2="249.5" y2="412.2"/>
+		<line class="st12" x1="231.9" y1="399" x2="241.1" y2="412.2"/>
+		<line class="st12" x1="242.2" y1="399" x2="230.9" y2="412.2"/>
+		<rect x="216.2" y="419.6" class="st0" width="59.7" height="39.8"/>
+	</g>
+</g>
+<g id="uaDivision">
+	<g>
+		<line class="st12" x1="116.2" y1="400" x2="125.5" y2="413.2"/>
+		<line class="st12" x1="126.5" y1="400" x2="115.2" y2="413.2"/>
+		<line class="st12" x1="97.6" y1="400" x2="106.8" y2="413.2"/>
+		<line class="st12" x1="107.9" y1="400" x2="96.6" y2="413.2"/>
+		<rect x="80.2" y="421.2" class="st7" width="59.7" height="39.8"/>
+	</g>
+</g>
+<g id="uaArmy">
+	<g>
+		<rect x="88.8" y="38.9" class="st7" width="59.7" height="39.8"/>
+		<line class="st12" x1="105" y1="16.2" x2="114.3" y2="29.3"/>
+		<line class="st12" x1="115.3" y1="16.2" x2="104" y2="29.3"/>
+		<line class="st12" x1="86.4" y1="16.2" x2="95.6" y2="29.3"/>
+		<line class="st12" x1="96.7" y1="16.2" x2="85.4" y2="29.3"/>
+		<line class="st12" x1="142.3" y1="16.2" x2="151.5" y2="29.3"/>
+		<line class="st12" x1="152.6" y1="16.2" x2="141.3" y2="29.3"/>
+		<line class="st12" x1="123.7" y1="16.2" x2="132.9" y2="29.3"/>
+		<line class="st12" x1="133.9" y1="16.2" x2="122.6" y2="29.3"/>
+	</g>
+</g>
+<g id="ruArmy">
+	<g>
+		<rect x="215.2" y="105.7" class="st0" width="59.7" height="39.8"/>
+		<line class="st12" x1="230.9" y1="82.9" x2="240.2" y2="96.1"/>
+		<line class="st12" x1="241.2" y1="82.9" x2="229.9" y2="96.1"/>
+		<line class="st12" x1="212.3" y1="82.9" x2="221.5" y2="96.1"/>
+		<line class="st12" x1="222.6" y1="82.9" x2="211.3" y2="96.1"/>
+		<line class="st12" x1="269.2" y1="82.9" x2="278.4" y2="96.1"/>
+		<line class="st12" x1="279.5" y1="82.9" x2="268.2" y2="96.1"/>
+		<line class="st12" x1="250.6" y1="82.9" x2="259.8" y2="96.1"/>
+		<line class="st12" x1="260.8" y1="82.9" x2="249.5" y2="96.1"/>
+	</g>
+</g>
+<g id="Layer_21">
+	<g>
+		<rect x="89.4" y="119.4" class="st0" width="59.7" height="39.8"/>
+		<line class="st12" x1="95.5" y1="96.6" x2="104.7" y2="109.8"/>
+		<line class="st12" x1="105.8" y1="96.6" x2="94.5" y2="109.8"/>
+		<line class="st12" x1="133.8" y1="96.6" x2="143" y2="109.8"/>
+		<line class="st12" x1="144" y1="96.6" x2="132.7" y2="109.8"/>
+		<line class="st12" x1="115.1" y1="96.6" x2="124.4" y2="109.8"/>
+		<line class="st12" x1="125.4" y1="96.6" x2="114.1" y2="109.8"/>
+	</g>
+</g>
+<g id="ruBattalion">
+	<g>
+		<line class="st13" x1="250.6" y1="669.1" x2="250.6" y2="682.6"/>
+		<line class="st13" x1="241" y1="669.1" x2="241" y2="682.6"/>
+		<rect x="215.2" y="691.5" class="st0" width="59.7" height="39.8"/>
+	</g>
+</g>
+<g id="uaBattalion">
+	<g>
+		<line class="st13" x1="114.3" y1="667.9" x2="114.3" y2="681.5"/>
+		<line class="st13" x1="104.8" y1="667.9" x2="104.8" y2="681.5"/>
+		<rect x="79.8" y="691.5" class="st7" width="59.7" height="39.8"/>
+	</g>
+</g>
+<g id="ruRegiment">
+	<g>
+		<line class="st13" x1="255.2" y1="588" x2="255.2" y2="601.6"/>
+		<line class="st13" x1="245.6" y1="588" x2="245.6" y2="601.6"/>
+		<line class="st13" x1="236.4" y1="588" x2="236.4" y2="601.6"/>
+		<rect x="215.5" y="610.6" class="st0" width="59.7" height="39.8"/>
+	</g>
+</g>
+<g id="uaRegiment">
+	<g>
+		<line class="st13" x1="119" y1="588" x2="119" y2="601.6"/>
+		<line class="st13" x1="109.4" y1="588" x2="109.4" y2="601.6"/>
+		<line class="st13" x1="100.1" y1="588" x2="100.1" y2="601.6"/>
+		<rect x="80.2" y="610.6" class="st7" width="59.7" height="39.8"/>
+	</g>
+</g>
+<g id="ruBrigade">
+	<g>
+		<line class="st12" x1="240.2" y1="488.7" x2="250.6" y2="502.4"/>
+		<line class="st12" x1="250.6" y1="488.7" x2="240.2" y2="502.4"/>
+		<rect x="215.5" y="514" class="st0" width="59.7" height="39.8"/>
+	</g>
+</g>
+<g id="uaBrigade">
+	<g>
+		<line class="st12" x1="104.5" y1="488.7" x2="114.9" y2="502.4"/>
+		<line class="st12" x1="114.9" y1="488.7" x2="104.5" y2="502.4"/>
+		<rect x="80.2" y="514" class="st7" width="59.7" height="39.8"/>
+	</g>
+</g>
+<g id="General_Icon_Ukraine">
+	<rect x="505" y="250" class="st7" width="59.7" height="39.8"/>
+	<rect x="517" y="239.7" class="st7" width="59.7" height="39.8"/>
+	<g>
+		
+			<image style="overflow:visible;opacity:0.75;" width="93" height="73" xlink:href="BC3584FDE43FCAA0.png"  transform="matrix(1 0 0 1 505.0688 216.3)">
+		</image>
+		<g>
+			<rect x="528.8" y="226" class="st14" width="59.7" height="39.8"/>
+			<rect x="528.8" y="226" class="st2" width="59.7" height="39.8"/>
+		</g>
+	</g>
+</g>
+<g id="General_Icon_Russia">
+	<rect x="492" y="117.7" class="st0" width="59.7" height="39.8"/>
+	<rect x="504" y="107.4" class="st0" width="59.7" height="39.8"/>
+	<g>
+		
+			<image style="overflow:visible;opacity:0.75;" width="94" height="74" xlink:href="BC3584FDE43FCAA1.png"  transform="matrix(1 0 0 1 492.7 83.95)">
+		</image>
+		<g>
+			<rect x="516.9" y="93.7" class="st15" width="59.7" height="39.8"/>
+			<rect x="516.9" y="93.7" class="st2" width="59.7" height="39.8"/>
+		</g>
+	</g>
+</g>
+</svg>
